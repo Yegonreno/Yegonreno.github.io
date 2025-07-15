@@ -1,0 +1,60 @@
+
+.super-navbar__dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.super-navbar__dropdown-button {
+    background-color: transparent;
+color: inherit;
+border: none;
+cursor: pointer;
+font-size: inherit;
+display: flex;
+align-items: center;
+}
+
+.super-navbar__dropdown-list {
+display: none;
+position: absolute;
+right: 0;
+background-color: white;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+list-style-type: none;
+margin: 0;
+padding: 0;
+z-index: 1;
+min-width: 200px;
+max-width: 240px;
+width: 100%;
+border-radius: 10px;
+}
+
+.super-navbar__dropdown-list li {
+padding: 12px 20px;
+border-radius: 24px;
+transition: background 0.15s;
+list-style: none;
+}
+
+.super-navbar__dropdown-list li:hover {
+background: #f0f0f0;
+}
+
+.super-navbar__dropdown-list li a {
+text-decoration: none;
+color: black;
+display: block;
+width: 100%;
+}
+
+/* Dark mode support for dropdown */
+html.theme-dark .super-navbar__dropdown-list {
+background-color: #181818;
+}
+html.theme-dark .super-navbar__dropdown-list li a {
+color: #fff;
+}
+html.theme-dark .super-navbar__dropdown-list li:hover {
+background: #232323;
+}
