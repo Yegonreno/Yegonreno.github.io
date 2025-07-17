@@ -1499,17 +1499,20 @@
                         </ul>
                     </div>
                 </div>
-                <span class="notion-heading__anchor" id="1132c58d62728080986cee6d40eec66a"></span>
-                <h1 id="block-1132c58d62728080986cee6d40eec66a" class="notion-heading notion-semantic-string">Massachusetts General Hospital - KPI Report</h1>
-                <span class="notion-heading__anchor" id="1132c58d627280a7b39fddefbfef3545"></span>
+                <div id="block-root-divider" class="notion-divider">
+                     </div>
+                     <span class="notion-heading__anchor" id="1132c58d627280a7b39fddefbfef3545"></span>
 <h2 id="block-1132c58d627280a7b39fddefbfef3545" class="notion-heading notion-semantic-string">Project Background</h2>
 <p id="block-1132c58d6272800bbce0f95466d01c75" class="notion-text notion-text__content notion-semantic-string">The Massachusetts General Hospital (MGH) executive team requested a high-level KPI report to assess the hospital's performance across key areas such as admissions, readmissions, length of stay, costs, and insurance coverage. <strong>The report is based on patient data from 2011 to 2022, encompassing nearly 1,000 patients and 27,891 encounters</strong>. The goal is to provide actionable insights to improve operational efficiency, patient outcomes, and financial performance.
 </p>
-
+<div id="block-root-divider" class="notion-divider">
+    </div>
 <h3 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">Dataset:</h3>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">The <a href="https://github.com/RENOYEGON/MassachusettsGeneralHospital-MGH--/tree/main/data" class="notion-link link" target="_blank" rel="noopener noreferrer">Dataset </a>consists of records of nearly 1,000 MGH patients, capturing patient <strong>demographics, insurance coverage, medical encounters, and procedures</strong>. Each encounter record includes details such as start and end date, total cost, encounter type, and insurance coverage.
 </p>
 
+<div id="block-root-divider" class="notion-divider">
+</div>
 <h3 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">Data Preparation & Exploration</h3>
 <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">Goal: Prepare the data for an effective data model for analysis.</h4>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">To facilitate accurate analysis, the following steps were performed</p>
@@ -1518,6 +1521,8 @@
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">Built dimension tables, including <code class="code">encounter class</code>, <code class="code">age</code>, <code class="code">age group</code>, and <code class="code">date</code>. Merged encounter and patient tables to get the age at encounter and the date differences between death and each encounter. Extracted the hour of each encounter visit. Grouped procedure table to get procedure line cost totals for each encounter, then merged this into the encounter table.</p>
 <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">In Tableau:</h4>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">Calculated LOS by minutes for non-admission encounters, and by days for admission encounters. Built an admission type calculated column to identify initial admissions and readmissions. Built all parameter tables for dynamic analysis</p>
+<div id="block-root-divider" class="notion-divider">
+</div>
 <h3 id="block-1132c58d627280f1ac7cd0ecc7cad6d6" class="notion-heading notion-semantic-string">Key Definitions & Considerations Admissions & Readmissions:</h3>
 <ul class="notion-bulleted-list">
   <li><strong> Admission:</strong> A patient formally accepted into the hospital for an overnight stay.</li>
@@ -1539,7 +1544,11 @@
   <li><strong>Admissions and Readmissions Over Time:</strong> Bar chart showing yearly trends from 2011 to 2022.</li>
   <li><strong>Insurance Coverage Trends:</strong> Area chart displaying insurance usage monthly</li>
   <li><strong>Encounter Activity by Day of Week:</strong> Dot matrix showing days (Mon–Sun) where daily encounters ≥ 30.</li>
-  </ul><h2 id="block-aaf37f7cd6e54a658bd8f11a1458a7ec" class="notion-heading notion-semantic-string">Executive Summary</h2>
+  </ul>
+  <div id="block-root-divider" class="notion-divider">
+    </div>
+    <span class="notion-heading__anchor" id="aaf37f7cd6e54a658bd8f11a1458a7ec"></span>
+<h2 id="block-aaf37f7cd6e54a658bd8f11a1458a7ec" class="notion-heading notion-semantic-string">Executive Summary</h2>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">This report analyzes MGH's performance from 2011 to 2022 and answers the following questions:
 </p>
 <ul class="notion-bulleted-list">
@@ -1548,7 +1557,9 @@
   <li>How much is the average cost per visit?</li>
   <li>How many procedures are covered by insurance?</li>
 </ul>
-<span class="notion-heading__anchor" id="e3a1bd08f8ae4d3593f80e118f65dfbd"></span>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <span class="notion-heading__anchor" id="e3a1bd08f8ae4d3593f80e118f65dfbd"></span>
 <h2 id="block-e3a1bd08f8ae4d3593f80e118f65dfbd" class="notion-heading notion-semantic-string">📊 My Tableau Dashboard</h2>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">Check out my interactive Tableau dashboard here:</p>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string"><a href="https://public.tableau.com/app/profile/reno.yegon/viz/MassachusettsGeneralHospitalMGHKPIReport/Dashboard1" class="notion-link link" target="_blank" rel="noopener noreferrer">🔗View Dashboard</a></p>
@@ -1556,7 +1567,9 @@
   <img src="https://public.tableau.com/static/images/Ma/MassachusettsGeneralHospitalMGHKPIReport/Dashboard1/1.png" alt="MGH Hospital KPIs Dashboard" style="width:100%;max-width:900px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);" loading="lazy">
   <figcaption class="notion-caption notion-semantic-string"><strong><a href="https://public.tableau.com/app/profile/reno.yegon/viz/MassachusettsGeneralHospitalMGHKPIReport/Dashboard1" class="notion-link link" target="_blank" rel="noopener noreferrer">Tableau Dashboard</a></strong></figcaption>
 </div>
-<span class="notion-heading__anchor" id="648a7d1a3e504d479f9f2cb3e84f5be4"></span>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <span class="notion-heading__anchor" id="648a7d1a3e504d479f9f2cb3e84f5be4"></span>
 <h2 id="block-648a7d1a3e504d479f9f2cb3e84f5be4" class="notion-heading notion-semantic-string">Insights Deep-Dive</h2>
 <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">1. Patient Admissions & Readmissions</h4>
 <ul class="notion-bulleted-list">
@@ -1574,7 +1587,9 @@
   <li>High readmission rates may indicate issues with discharge planning, post-discharge care, or patient follow-up.</li>
 <li>Focus on improving care transitions and patient education to reduce readmissions.</li>
 </ul>
-<h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">2. Length of Stay (LOS)</h4>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">2. Length of Stay (LOS)</h4>
 <ul class="notion-bulleted-list">
   <li>Overall Average LOS: <strong>7.3 hours.</strong></li>
   <li>There was a peak in average length of stay in <strong>2020 to 61.4hours.</strong></li>
@@ -1595,7 +1610,9 @@
 <li>Optimize workflows and resource allocation to reduce LOS, particularly for inpatient care.</li>
 <li><strong>Reduce Admitted patients’ length of stay</strong>  to pre-pandemic levels will be essential for improving patient throughput and resource allocation.</li>
 </ul>
-<h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">3. Cost Analysis</h4>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">3. Cost Analysis</h4>
 <ul class="notion-bulleted-list">
   <li>Average Cost per Visit was  <strong>$3.6K</strong>  with Admission average cost per visit being <strong>$7.7K doubling non-admission with $3.5K</strong>, <strong>2020</strong> had an avarage cost per visit of <strong>$14K</strong></li>
   <li><strong>Admission cost surged $4.8K during 2020</strong> with those non-insured admission average cost at $9.1K,middle age adults topping with $12.98K.</li>
@@ -1607,7 +1624,9 @@
   <li>High inpatient costs may strain hospital resources.</li>
 <li>Explore cost-saving measures, such as reducing unnecessary tests or optimizing supply chain management.</li>
 </ul>
-<h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">4. Insurance Coverage</h4>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">4. Insurance Coverage</h4>
 <ul class="notion-bulleted-list">
   <li>Procedure's Total Cost Covered by Insurance was  <strong>$14.7K with $5.8K</strong> being uninsured</li>
   <li><strong>60% of procedures covered by insurance</strong>  while 40% are uninsured, <strong>Medicare covers 33%</strong> of the insurance.</li>
@@ -1619,7 +1638,9 @@
   <li>Uninsured patients face significant financial burdens, potentially impacting access to care..</li>
 <li><strong>Collaborate with insurers to improve coverage and explore financial assistance programs</strong> for uninsured patients.</li>
 </ul>
-<span class="notion-heading__anchor" id="f1c23f7a4c914a9e9c3a1d9efb5a94f8"></span>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <span class="notion-heading__anchor" id="f1c23f7a4c914a9e9c3a1d9efb5a94f8"></span>
 <h2 id="block-f1c23f7a4c914a9e9c3a1d9efb5a94f8" class="notion-heading notion-semantic-string">Answers to Key Questions</h2>
 <ul class="notion-bulleted-list">
   <li>How many patients have been admitted or readmitted over time? <strong>Total Patients: 1135, Readmitted: 290</strong>.</li>
@@ -1627,6 +1648,9 @@
   <li>How much is the average cost per visit? <strong>Average cost: $3.6K, skewed by outliers.</strong></li>
   <li>How many procedures are covered by insurance? <strong>60% of procedure costs are covered by insurance.</strong></li>
 </ul>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <span class="notion-heading__anchor" id="3d74c6e2fd384d29a31ef9b7152f6bcb"></span>
 <h2 id="block-3d74c6e2fd384d29a31ef9b7152f6bcb" class="notion-heading notion-semantic-string">Recommendations</h2>
 <h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">1. Reduce Readmissions:</h4>
 <ul class="notion-bulleted-list">
@@ -1653,13 +1677,16 @@
   <li>Collaborate with insurers like Anthem to expand coverage for uninsured patients.</li>
 <li>Develop financial assistance programs to support uninsured patients.</li>
 </ul>
-<h3 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">4. Key Questions for Stakeholders Prior to Project Advancement</h3>
+<h4 id="block-1132c58d627280599381e733a95efbd8" class="notion-heading notion-semantic-string">Key Questions for Stakeholders Prior to Project Advancement</h4>
 <p id="block-1132c58d6272803b877ce1a062f08435" class="notion-text notion-text__content notion-semantic-string">These are some questions I would've loved to ask stakeholders/project leads to learn more about their own needs/existing knowledge on the objective at hand.</p>
 <ul class="notion-bulleted-list">
   <li>What interval do you use for measuring readmissions: 30, 60, or 90 days after a previous admission?</li>
   <li>Should readmissions be related to the same medical conditions or reasons as the initial admission?</li>
   <li>How are encounter entries recorded? Given that some admissions are logged exactly 24 hours apart, how should these be treated? Are these entries reset daily, or should they be considered continuous admissions?</li>
 </ul>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    <span class="notion-heading__anchor" id="6c8a9e0e2d3040f0b0f7c4b8f38dbaf2"></span>
 <h2 id="block-6c8a9e0e2d3040f0b0f7c4b8f38dbaf2" class="notion-heading notion-semantic-string">Assumptions and Caveats</h2>
 <ul class="notion-bulleted-list">
   <li>Timeframe: The analysis covers 2011-2022, and trends may not be applicable to future years.</li>
@@ -1668,7 +1695,9 @@
   <li>The readmission rates are based on a <strong>30-day interval</strong> for returning patients.</li>
   <li>Drop in readmission rate on 2020 onwards was assumed to be caused by the pandemic.</li>
 </ul>
-</main>
+<div id="block-root-divider" class="notion-divider">
+    </div>
+    </main>
         </div>
             <footer class="super-footer corners no-links">
                 <div class="super-footer__content">

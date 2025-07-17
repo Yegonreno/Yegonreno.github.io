@@ -1523,13 +1523,17 @@
                         </ul>
                     </div>
                 </div>
-                <span class="notion-heading__anchor" id="1c8bea4e3ba241ed8d2474b3382f2be4"></span>
+                <div id="block-root-divider" class="notion-divider">
+                    </div>
+                    <span class="notion-heading__anchor" id="1c8bea4e3ba241ed8d2474b3382f2be4"></span>
                         <h1 id="block-1c8bea4e3ba241ed8d2474b3382f2be4" class="notion-heading notion-semantic-string"><strong>Project overview</strong></h1>
                         <p id="block-639011a442e04f92b0a8f11b8d1d38fd" class="notion-text notion-text__content notion-semantic-string"><em>Café Rewards</em> program just run a test by sending different combinations of promotional offers to existing rewards members. Now that the <strong>30-day period</strong> for the test has concluded, the task is to <strong>identify key customer segments and develop a data-driven strategy for future promotional messaging & targeting.</strong> The results should be summarized in a report that will be presented to the Chief Marketing Officer (CMO).</p>
                         <p id="block-639011a442e04f92b0a8f11b8d1d38fd" class="notion-text notion-text__content notion-semantic-string">The data consists of a table with <strong>17k</strong> unique existing rewards members including their <code class="code">age</code>, <code class="code">income</code>, <code class="code">gender</code>, and <code class="code">date of membership</code>; and another table capturing all events during the 30-day period, such as when <strong>offers were sent, viewed and completed</strong>, along with all customer transactions with the cafe.</p>
                         <p id="block-639011a442e04f92b0a8f11b8d1d38fd" class="notion-text notion-text__content notion-semantic-string">The data used in this project is available <strong> </strong><strong><a class="notion-link link" href="https://github.com/RENOYEGON/Cafe_Rewards_program/tree/main/Data"><u>here</u></a></strong><strong>.</strong></p>
                         <div id="block-477052cacfe74e3cb5245706a7b1a396" class="notion-text"></div>
-                        <span class="notion-heading__anchor" id="f53a4dbc688941458872429d348d151d"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="f53a4dbc688941458872429d348d151d"></span>
                         <h1 id="block-f53a4dbc688941458872429d348d151d" class="notion-heading notion-semantic-string"><strong>Data Validation, Findings & Assumptions</strong></h1>
                         <span class="notion-heading__anchor" id="55ebd2a9ad2d49e5b340c31c7e760aa4"></span>
                         <h2 id="block-55ebd2a9ad2d49e5b340c31c7e760aa4" class="notion-heading notion-semantic-string"><strong>1. Data cleaning</strong></h2>
@@ -1540,7 +1544,9 @@
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>Income Brackets:</strong> Lower-Middle (30–50k), Middle (50–75k), Upper-Middle (75–100k), Affluent (100–120k).</li>
                             </ul>
                         <p id="block-639011a442e04f92b0a8f11b8d1d38fd" class="notion-text notion-text__content notion-semantic-string">These groupings provided a solid overview of customer demographics and revenue distribution.</p>
-                        <span class="notion-heading__anchor" id="8ba3ec7c2d114aab92b9315763eaeb3c"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="8ba3ec7c2d114aab92b9315763eaeb3c"></span>
                         <h2 id="block-8ba3ec7c2d114aab92b9315763eaeb3c" class="notion-heading notion-semantic-string"><strong>2.Key Customer Segments</strong></h2>
                         <p class="notion-text notion-text__content notion-semantic-string"><strong>I performed RFM segmentation and clustering</strong> on the dataset to identify distinct customer groups for targeted marketing. After importing and filtering transaction data, <strong>Recency, Frequency, and Monetary metrics</strong> were calculated per customer.</p>
                     <p class="notion-text notion-text__content notion-semantic-string">Outliers were identified using boxplots and the IQR method, then removed to ensure clean clustering. StandardScaler was applied before running K-Means, with <code class="code">k=4</code>  selected using the <strong>Elbow and Silhouette methods</strong>.</p>
@@ -1564,7 +1570,9 @@
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">The line plot reveals which clusters have higher spenders, more frequent buyers, or more recent activity.</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">Together, these visuals help identify <strong>high-value segments, potential targets for retention, and areas for marketing focus</strong>.</li>
                             </ul>
-                        <span class="notion-heading__anchor" id="1e4a3f8a34d74fcd82099126f8d8a641"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="1e4a3f8a34d74fcd82099126f8d8a641"></span>
                         <h2 id="block-1e4a3f8a34d74fcd82099126f8d8a641" class="notion-heading notion-semantic-string"><strong>3. Informational Offers and Completion rates</strong></h2>
                         <p id="block-639011a442e04f92b0a8f11b8d1d38fd" class="notion-text notion-text__content notion-semantic-string">To calculate the completion rate, informational offers are not considered. It was assumed that these do not apply to the reward criteria since they are only for informational purposes for the customer. So <strong>completion rate only consider bogo + discount offers</strong>. For the general calculation of % Viewed, informational offer was included.</p>
                         <span class="notion-heading__anchor" id="d9fae3b9cf4646cfae3ad441ec5bba2d"></span>
@@ -1574,7 +1582,9 @@
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string">There were cases of transactions with more than 1 offer completed related. This is ok, but when distributing the amount by type of offer the result will not be the exact sum of both (because they coincide in some transactions).</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">Of the <strong>33,579 completed offer events</strong>, there were instances where customers completed nearly every offer before viewing it.</li>
                             </ul>
-                        <span class="notion-heading__anchor" id="49b6a04c5a0c46a4829983f0d4ae4c79"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="49b6a04c5a0c46a4829983f0d4ae4c79"></span>
                         <h1 id="block-49b6a04c5a0c46a4829983f0d4ae4c79" class="notion-heading notion-semantic-string"><strong>Deep Insights</strong></h1>
                         <h2 id="block-c128aa1c48f84c2da8d8b2ae99a77f66" class="notion-heading notion-semantic-string"><strong>1. How many reward offers were completed? Which offers had the highest completion rate?</strong></h2>
                         <h3 id="block-1c8bea4e3ba241ed8d2474b3382f2be4" class="notion-heading notion-semantic-string"><strong>Business Metric Insight:</strong></h3>
@@ -1583,21 +1593,27 @@
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">The offer with the highest completion rate is <code class="code">fafdcd668e3743c1bb461111dcafc2a4</code>  at <strong>85.15%</strong> , followed closely by <code class="code">2298d6c36e964ae4a3e7e9706d1fb8c2</code> <strong>(84.40%)</strong>. Two offers <code class="code">3f207df678b143eea3cee63160fa8bed</code> and <code class="code">5a8bc65990b245e5a138643cd4eb9837</code> had <strong>zero completions despite being received over 6,600 times each</strong>, indicating low engagement or relevance. The overall average completion rate across all offers is <strong>55.38%</strong>, suggesting that more than half of issued offers lead to completions.</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">Discount offers have a <strong>slightly higher completion rate (71.51%)</strong> compared to BOGO offers <strong>(66.91%)</strong>. Both types perform strongly, but <strong>discounts edge out BOGO in effectiveness</strong>. This suggests customers <strong>may prefer immediate savings over bundled deals.</strong></li>
                             </ul>
-                        <h2 id="block-7f11c5d81263437f88592bdb983e44c2" class="notion-heading notion-semantic-string"><strong>2. How many informational offers were followed by transactions?</strong></h2>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <h2 id="block-7f11c5d81263437f88592bdb983e44c2" class="notion-heading notion-semantic-string"><strong>2. How many informational offers were followed by transactions?</strong></h2>
                         <h3 id="block-1c8bea4e3ba241ed8d2474b3382f2be4" class="notion-heading notion-semantic-string"><strong>Business Metric Insight:</strong></h3>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>2,019 transactions were influenced by informational offers</strong>, suggesting that <strong>brand messaging and awareness campaigns</strong> still drive measurable customer action especially when distributed across <strong>multi-channel strategies</strong> (email, mobile, social, web).</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>95% </strong>of attributed transactions (36,825 out of 38,844) came from <strong>offers with a completion mechanism (BOGO, Discount)</strong>. Only <strong>5%</strong> were influenced by <strong>Informational offers</strong>, which don’t require explicit completion but still drove purchases.</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">While informational offers have a lower transaction count, <strong>they still show measurable influence</strong>. However, BOGO and Discount offers are far <strong>more effective in driving direct, attributed purchases</strong>.</li>
                             </ul>
-                        <h2 id="block-acd2fb1ec63f4bbfa00c7e7cb2d9f1b4" class="notion-heading notion-semantic-string"><strong>3. How are customer demographics distributed?</strong></h2>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <h2 id="block-acd2fb1ec63f4bbfa00c7e7cb2d9f1b4" class="notion-heading notion-semantic-string"><strong>3. How are customer demographics distributed?</strong></h2>
                         <h3 id="block-1c8bea4e3ba241ed8d2474b3382f2be4" class="notion-heading notion-semantic-string"><strong>Key Insights</strong></h3>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>The majority of customers fall under the Middle Income tier (almost 45%)</strong>, followed by Lower Middle and Upper Middle.</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">In terms of life stages: <strong>Retirees make up the largest group at 28%</strong>, indicating an older customer base. <strong>Pre-Retirement and Mature Professionals also represent significant portions</strong>, showing the brand’s strong appeal among older working-age adults.</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">Younger segments :<strong>Young Adults and Early Career Professionals account for just 16.3%</strong>, suggesting either a smaller audience or an opportunity for targeted marketing.</li>
                             </ul>
-                        <h2 id="block-2ab3e9c7d1a74a5c9b98601f3f803a8f" class="notion-heading notion-semantic-string"><strong>4. Are there any demographic patterns in offer completion?</strong></h2>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <h2 id="block-2ab3e9c7d1a74a5c9b98601f3f803a8f" class="notion-heading notion-semantic-string"><strong>4. Are there any demographic patterns in offer completion?</strong></h2>
                         <h3 id="block-1c8bea4e3ba241ed8d2474b3382f2be4" class="notion-heading notion-semantic-string"><strong>Key Patterns and Insights</strong></h3>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>Middle Income customers had the highest number of completed offers (16,004)</strong>, accounting for ~43% of all completions.</li>
@@ -1612,7 +1628,9 @@
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>Younger users</strong> (Early Career, Young Adults) may require <strong>more personalized or digital-centric strategies</strong> to improve conversion.</li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string">Demographic segmentation can play a vital role in offer design and distribution channels.</li>
                         </ul>
-                        <span class="notion-heading__anchor" id="0dfcae745b994f5aa831a290e34dcf71"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="0dfcae745b994f5aa831a290e34dcf71"></span>
                         <h1 id="block-0dfcae745b994f5aa831a290e34dcf71" class="notion-heading notion-semantic-string"><strong>Customer Segments Analysis</strong></h1>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>Among all customer segments, Frequent Shoppers stood out as the most responsive group</strong>, contributing to <strong>33.2%</strong> of completed offer attributions , that’s 4,287 out of 12,440. Despite their enthusiasm, they <strong>take the longest to act, with an average of 13.29 days to complete a transaction</strong>. This delay may reflect a longer decision-making process or a comfort with waiting for the perfect moment to make their move.</li>
@@ -1624,7 +1642,9 @@
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>Looking at informational offers</strong>, these had the greatest impact on a few key groups: First-Time Buyers (658), Sleeping Buyers (299), and Frequent Shoppers (489). It’s clear that informational content resonates most with onboarding or reengagement, <strong>playing a subtle but powerful role in guiding behavior.</strong></li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>Across all segments, the average time to transaction is 6.3 days </strong>, but certain groups, like Frequent Shoppers and Sleeping Buyers, take significantly longer. This insight reveals not just how customers behave, but when giving a clearer picture of where patience is a virtue and where urgency is key.</li>
                             </ul>
-                        <span class="notion-heading__anchor" id="b1e47dfe0a9c417f9f87a6d2bb14ac2a"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="b1e47dfe0a9c417f9f87a6d2bb14ac2a"></span>
                         <h1 id="block-b1e47dfe0a9c417f9f87a6d2bb14ac2a" class="notion-heading notion-semantic-string"><strong>Offer Journey</strong></h1>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>Frequent Shoppers emerged as the most targeted group</strong>, having received an impressive 3,936 offers. Yet despite leading in total completions (448), their conversion rate sits at a modest ~11%, suggesting that volume doesn’t always translate to action.</li>
@@ -1641,7 +1661,9 @@
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>Informational campaigns</strong>, while limited in direct revenue, <strong>may still influence awareness.</strong></li>
                             <li id="block-16c92da4e1fe4acc8865fa0f44c8dbd9" class="notion-list-item notion-semantic-string"><strong>Improving attribution tracking</strong> could uncover more insights into customer motivation.</li>
                         </ul>
-                        <span class="notion-heading__anchor" id="95dc3c7317cd4531a3e84af01d3e8fd5"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="95dc3c7317cd4531a3e84af01d3e8fd5"></span>
                         <h1 id="block-95dc3c7317cd4531a3e84af01d3e8fd5" class="notion-heading notion-semantic-string"><strong>Turning Insight into Action from Final Takeaways</strong></h1>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>The data highlights a trio of highly efficient segments: First-Time Buyers, High Spenders, and Potential Upgraders.</strong> These groups consistently turn even limited exposure , whether just receiving or viewing offers into completions. Their behavior makes them <strong>ideal for ROI-focused campaigns</strong>, where results matter most.</li>
@@ -1651,7 +1673,9 @@
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string">For slower-moving <strong>clusters like Frequent Shoppers and Sleeping Buyers, consider integrating urgency cues or shorter offer windows</strong> to nudge quicker decisions. Meanwhile, <strong>quick responders like VIPs and Win-Backs can be driven with flash deals or exclusive perks</strong>, optimizing for speed and value.</li>
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string">Lastly, remember that <strong>timing isn’t one-size-fits-all</strong>. Segment-specific behaviors show that some customers need more time, while others move fast. <strong>Tailoring the timing of your campaigns accordingly could be the edge that boosts overall performance.</strong></li>
                          </ul>
-                        <span class="notion-heading__anchor" id="6e9b6f54a0cc463daae8e9aef202dd9c"></span>
+                        <div id="block-root-divider" class="notion-divider">
+                            </div>
+                            <span class="notion-heading__anchor" id="6e9b6f54a0cc463daae8e9aef202dd9c"></span>
                         <h1 id="block-6e9b6f54a0cc463daae8e9aef202dd9c" class="notion-heading notion-semantic-string"><strong>Final Recommendations</strong></h1>
                         <ul class="notion-bulleted-list">
                             <li id="block-d55d210ce56047e3b069d94f84f540ac" class="notion-list-item notion-semantic-string"><strong>Cluster 1 – Frequent Shoppers (33.2% of Offer Attributions).</strong></li>
