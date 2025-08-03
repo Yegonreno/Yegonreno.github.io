@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://renoyegon.site/sitemap.xml
